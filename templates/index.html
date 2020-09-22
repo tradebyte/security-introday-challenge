@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% end %}
+
+{% block content %}
+  {% if not current_user %}
+    <p>Login to update fruit quantity.</p>
+  {% end %}
+
+  <ul>
+    {% for fruit in fruits %}
+      <li>
+        {{ fruit[1][0].upper() + fruit[1][1:] }} - {{ fruit[2] }}
+        {% if current_user %}
+          <form action="/fruit/{{ fruit[0] }}" method="post">
+            <select name="quantity">
+              <option value="0" {% if fruit[2] == 0 %}selected{% end %}>0</option>
+              <option value="1" {% if fruit[2] == 1 %}selected{% end %}>1</option>
+              <option value="2" {% if fruit[2] == 2 %}selected{% end %}>2</option>
+              <option value="3" {% if fruit[2] == 3 %}selected{% end %}>3</option>
+              <option value="4" {% if fruit[2] == 4 %}selected{% end %}>4</option>
+              <option value="5" {% if fruit[2] == 5 %}selected{% end %}>5</option>
+            </select>
+            <button type="submit">Update</button>
+          </form>
+        {% end %}
+      </li>
+    {% end %}
+  </ul>
+
+  <p>Here you can send us a feedback about the app:</p>
+  <form action="/" method="post">
+    <div>
+      <textarea name="feedback"></textarea>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+{% end %}
