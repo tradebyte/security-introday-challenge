@@ -2,24 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="{{
-      static_url("css/style.css")
-    }}">
+    <link rel="stylesheet" type="text/css" href="{{ static_url("css/style.css") }}">
 
     <title>{% block title %}Bad Application{% end %}</title>
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        {% if current_user %}
-          <li><a href="/logout">Logout</a></li>
-        {% else %}
-          <li><a href="/login">Login</a></li>
-        {% end %}
-      </ul>
-    </nav>
+	<nav class="main-nav">
+	  <ul>
+		<li class="nav-item active"><a href="/">Home</a></li>
+		{% if current_user %}
+		  <li class="nav-item"><a href="/logout">Logout</a></li>
+		{% else %}
+		  <li class="nav-item"><a href="/login">Login</a></li>
+		{% end %}
+	  </ul>
+	</nav>
     {% block content %}
     {% end %}
   </body>

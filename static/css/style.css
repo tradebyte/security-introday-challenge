@@ -1,8 +1,97 @@
-form > div {
-  margin-bottom: 8px;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .fruit-list {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    .fruit-item {
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .fruit-name {
+      font-weight: bold;
+    }
+
+    .quantity-select {
+      margin-right: 10px;
+    }
+
+    .update-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .feedback-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    button[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+/* Define a simple navigation menu style */
+.main-nav {
+  background-color: #333; /* Background color for the navigation bar */
+  padding: 10px 0; /* Add padding to the top and bottom */
 }
 
-nav ul {
-  list-style: none;
-  padding-left: 0px;
+.main-nav ul {
+  list-style-type: none; /* Remove bullet points from the list */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Display list items in a row */
+  justify-content: center; /* Center the items horizontally */
+}
+
+.main-nav li {
+  margin: 0 15px; /* Add space between menu items */
+}
+
+.main-nav a {
+  text-decoration: none; /* Remove underlines from links */
+  color: #fff; /* Text color for links */
+}
+
+.main-nav .active {
+  font-weight: bold; /* Highlight the active menu item */
 }

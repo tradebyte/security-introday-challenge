@@ -3,15 +3,16 @@
 {% block title %}Login{% end %}
 
 {% block content %}
-<form method="post" action="/login">
-    <div>
-        <label for="username">Username</label>
-        <input id="username" type="text" name="username" />
-    </div>
-    <div>
-        <label for="password">Password</label>
-        <input id="password" type="password" name="password" />
-    </div>
-    <button type="submit">Login</button>
-</form>
+<div class="vertical-align">
+  <div class="container">
+    <div class="avatar"></div>
+
+    <form method="post" action="/login">
+      <input id="username" type="text" name="username"  placeholder="username">
+      <input id="password" type="password" name="password" placeholder="password">
+	      <button type="submit">Login</button>
+    </form>
+
+  </div>
+</div>
 {% end %}
